@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Event Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="main.js"></script>
+</head>
+<body class="font-sans bg-gray-50 scroll-smooth">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+  <nav class="flex items-center justify-between px-6 py-4">
+    <div class="text-2xl font-bold text-blue-600">EventX</div>
+    <ul class="hidden md:flex space-x-6 text-gray-700">
+      <li><a href="#details" class="hover:text-blue-500">Event Details</a></li>
+      <li><a href="#speakers" class="hover:text-blue-500">Speakers</a></li>
+      <li><a href="#schedule" class="hover:text-blue-500">Schedule</a></li>
+      <li><a href="#register" class="hover:text-blue-500">Register</a></li>
+      <li><a href="#faq" class="hover:text-blue-500">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-cover bg-center h-screen text-white flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?conference');">
+  <div class="bg-black bg-opacity-60 p-10 rounded">
+    <h1 id="hero-text" class="text-4xl md:text-5xl font-bold mb-4">Welcome to the Event</h1>
+    <p id="countdown" class="text-xl mb-6"></p>
+    <a href="#register" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded transition">Register Now</a>
+  </div>
+</section>
+
+<!-- Event Details -->
+<section id="details" class="py-12 px-6 bg-white">
+  <h2 class="text-3xl font-bold mb-6 text-center">Event Details</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div><strong>Date:</strong> July 1, 2025</div>
+    <div><strong>Location:</strong> Pune Convention Center</div>
+    <div><strong>Audience:</strong> Developers, Designers, Tech Enthusiasts</div>
+    <div><strong>Theme:</strong> Innovating Tomorrow</div>
+  </div>
+</section>
+
+<!-- Speakers Section -->
+<section id="speakers" class="py-12 px-6 bg-gray-100">
+  <h2 class="text-3xl font-bold mb-6 text-center">Speakers</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded shadow text-center">
+      <img src="https://i.pravatar.cc/150?img=1" class="mx-auto rounded-full mb-4" alt="Dr. Ayesha Khan" />
+      <h3 class="text-lg font-semibold">Dr. Ayesha Khan</h3>
+      <p class="text-sm text-gray-600">AI Researcher</p>
+    </div>
+    <div class="bg-white p-4 rounded shadow text-center">
+      <img src="https://i.pravatar.cc/150?img=2" class="mx-auto rounded-full mb-4" alt="Rohit Mehta" />
+      <h3 class="text-lg font-semibold">Rohit Mehta</h3>
+      <p class="text-sm text-gray-600">CTO, TechNext</p>
+    </div>
+    <div class="bg-white p-4 rounded shadow text-center">
+      <img src="https://i.pravatar.cc/150?img=3" class="mx-auto rounded-full mb-4" alt="Anjali Sharma" />
+      <h3 class="text-lg font-semibold">Anjali Sharma</h3>
+      <p class="text-sm text-gray-600">UX Designer, Adobe</p>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule Section -->
+<section id="schedule" class="py-12 px-6">
+  <h2 class="text-3xl font-bold mb-6 text-center">Schedule</h2>
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white">
+      <thead>
+        <tr class="bg-blue-500 text-white">
+          <th class="py-2 px-4 text-left">Time</th>
+          <th class="py-2 px-4 text-left">Topic</th>
+          <th class="py-2 px-4 text-left">Speaker</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t">
+          <td class="py-2 px-4">9:00 AM</td>
+          <td class="py-2 px-4">Opening Keynote</td>
+          <td class="py-2 px-4">Dr. Ayesha Khan</td>
+        </tr>
+        <tr class="border-t">
+          <td class="py-2 px-4">11:00 AM</td>
+          <td class="py-2 px-4">Future of AI</td>
+          <td class="py-2 px-4">Rohit Mehta</td>
+        </tr>
+        <tr class="border-t">
+          <td class="py-2 px-4">2:00 PM</td>
+          <td class="py-2 px-4">Designing for Empathy</td>
+          <td class="py-2 px-4">Anjali Sharma</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Registration Section -->
+<section id="register" class="py-12 px-6 bg-gray-100">
+  <h2 class="text-3xl font-bold mb-6 text-center">Register</h2>
+  <form class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+    <label class="block mb-4">
+      <span class="text-gray-700">Name</span>
+      <input type="text" class="mt-1 block w-full border-gray-300 rounded shadow-sm" required>
+    </label>
+    <label class="block mb-4">
+      <span class="text-gray-700">Email</span>
+      <input type="email" class="mt-1 block w-full border-gray-300 rounded shadow-sm" required>
+    </label>
+    <label class="block mb-4">
+      <span class="text-gray-700">Message</span>
+      <textarea class="mt-1 block w-full border-gray-300 rounded shadow-sm"></textarea>
+    </label>
+    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition">Submit</button>
+  </form>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-12 px-6">
+  <h2 class="text-3xl font-bold mb-6 text-center">FAQ</h2>
+  <div class="max-w-2xl mx-auto">
+    <details class="mb-4 bg-white rounded shadow p-4">
+      <summary class="font-semibold cursor-pointer">What is the event about?</summary>
+      <p class="mt-2 text-gray-700">It's about innovation in technology and design.</p>
+    </details>
+    <details class="mb-4 bg-white rounded shadow p-4">
+      <summary class="font-semibold cursor-pointer">Do I need to pay to attend?</summary>
+      <p class="mt-2 text-gray-700">No, the event is completely free.</p>
+    </details>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6 mt-12">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+    <p>&copy; 2025 EventX. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="#" class="hover:text-blue-400" aria-label="Twitter">Twitter</a>
+      <a href="#" class="hover:text-blue-400" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" class="hover:text-blue-400" aria-label="Contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
